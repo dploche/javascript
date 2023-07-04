@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DP - JS Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <div id="askForNum">
+    <h1 id="displayText">Insert the first number</h1>
+    <input id="userInput"/>
+    <button id="calcButton" type="button" onclick="numSubmit()">Accept</button>
+  </div>
+  <div id="showSupportedOperations" hidden>
+    <h1 id="operationDisplay">Select an operand</h1>
+    <button type="button" id="sum" onclick="sumNums()">Sum</button>
+    <button type="button" id="substract" onclick="substractNums()">substract</button>
+    <button type="button" id="multiply" onclick="multiplyNums()">multiply</button>
+    <button type="button" id="divide" onclick="divideNums()">divide</button>
+  </div>
+  <div id="showResult">
+    <h1 id="finalResult"></h1>
+  </div>
+  <script src="index.js"></script>
+  </body>
+</html>
