@@ -6,26 +6,17 @@ function firstCall(){
 
 function refreshTime(){
     let today = new Date();
-    let timeAbbreviation;
     let currentHours = today.getHours();
-    let currentMinutes = today.getMinutes();
-    let currentSeconds = today.getSeconds();
-    if(currentHours >= 12 || (currentHours === 12 && currentMinutes >= 30)){
-        timeAbbreviation = 'PM';
-    }else{
-        timeAbbreviation = 'AM';
-    }
-    currentHours -= 12;
-    if(currentHours < 10){
-        currentHours = '0' + currentHours;
-    }
-    if(currentMinutes < 10){
-        currentMinutes = '0' + currentMinutes;
-    }
-    if(currentSeconds < 10){
-        currentSeconds = '0' + currentSeconds;
-    }
-    timeParagraph.innerHTML = `${currentHours}:${currentMinutes}:${currentSeconds} ${timeAbbreviation}`;
+    let currentMinutes = formatNum(today.getMinutes());
+    let currentSeconds = formatNum(today.getSeconds());
+    let amOrPm = currentHours >= 12 ? 'PM' : 'AM';
+    currentHours = (currentHours % 12) || 12;
+    currentHours = formatNum(currentHours);
+    timeParagraph.innerHTML = `${currentHours}:${currentMinutes}:${currentSeconds} ${amOrPm}`;
+}
+
+function formatNum (num){
+    return num < 10 ? '0' + num : num;
 }
 
 window.setInterval(refreshTime, 1000);
