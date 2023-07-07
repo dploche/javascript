@@ -1,0 +1,52 @@
+form {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#userInput {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#jsonTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#jsonTable td, #jsonTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#jsonTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#jsonTable tr:hover {
+    background-color: #ddd;
+}
+
+#jsonTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
