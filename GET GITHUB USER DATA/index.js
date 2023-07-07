@@ -21,11 +21,13 @@ const retriveUserInfo = async (user) => {
             attributeHeader.classList.add('bold');
             valueHeader.classList.add('bold');
             for(let i in myJson){
-                let newRow = table.insertRow();
-                let cell1 = newRow.insertCell(0);
-                let cell2 = newRow.insertCell(1);
-                cell1.innerHTML = i;
-                cell2.innerHTML = myJson[i];
+                if(i === 'login' || i === 'id' || i === 'name' || i === 'location' || i === 'html_url'){
+                    let newRow = table.insertRow();
+                    let cell1 = newRow.insertCell(0);
+                    let cell2 = newRow.insertCell(1);
+                    cell1.innerHTML = i;
+                    cell2.innerHTML = myJson[i];
+                }
             }
             document.getElementById('jsonResponse').innerHTML = JSON.stringify(myJson, null, 2);
         }

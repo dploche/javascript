@@ -11,6 +11,15 @@ body {
     text-align: center;
 }
 
+#tableContainer {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #userInput {
     padding: 10px;
     border-radius: 4px;
@@ -36,7 +45,7 @@ button:hover {
 }
 
 #jsonTable {
-    width: 100%;
+    width: 70%;
     border-collapse: collapse;
 }
 
