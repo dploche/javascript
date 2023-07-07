@@ -1,3 +1,5 @@
+const wantedAttributes = ['login', 'id', 'name', 'location', 'html_url'];
+
 const retriveUserInfo = async (user) => {
     try {
         let table = document.getElementById('jsonTable'); //get table
@@ -21,7 +23,7 @@ const retriveUserInfo = async (user) => {
             attributeHeader.classList.add('bold');
             valueHeader.classList.add('bold');
             for(let i in myJson){
-                if((i === 'login' || i === 'id' || i === 'name' || i === 'location' || i === 'html_url') && myJson[i] !== null){
+                if((wantedAttributes.includes(i)) && myJson[i] !== null){
                     let newRow = table.insertRow();
                     let cell1 = newRow.insertCell(0);
                     let cell2 = newRow.insertCell(1);
