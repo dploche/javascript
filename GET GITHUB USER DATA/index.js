@@ -12,7 +12,14 @@ const retriveUserInfo = async (user) => {
             throw new Error(`HTTP error! status: ${response.status}`);
         } else {
             errorSpan.style.display = 'none';
-            const myJson = await response.json(); 
+            const myJson = await response.json();
+            let firstRow = table.insertRow() 
+            let attributeHeader = firstRow.insertCell();
+            let valueHeader = firstRow.insertCell();
+            attributeHeader.innerHTML = 'Attribute';
+            valueHeader.innerHTML = 'Value';
+            attributeHeader.classList.add('bold');
+            valueHeader.classList.add('bold');
             for(let i in myJson){
                 let newRow = table.insertRow();
                 let cell1 = newRow.insertCell(0);

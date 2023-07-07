@@ -6,6 +6,11 @@ form {
     gap: 10px;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
 #userInput {
     padding: 10px;
     border-radius: 4px;
@@ -20,6 +25,11 @@ button {
     color: white;
     cursor: pointer;
 }
+
+.bold {
+    font-weight: bold;
+  }
+
 
 button:hover {
     background-color: #45a049;
