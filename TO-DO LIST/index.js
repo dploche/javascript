@@ -64,7 +64,7 @@ document.getElementById('nightModeBtn').addEventListener('click', function() {
     let bodyStyles = window.getComputedStyle(document.body);
     let isNightMode = bodyStyles.getPropertyValue('--text-color') === '#fff';
     if (isNightMode) {
-        // Switch to day mode
+        //Night mode
         document.documentElement.style.setProperty('--bg-color', '#f4f4f4');
         document.documentElement.style.setProperty('--text-color', '#000');
         document.documentElement.style.setProperty('--button-color', '#5C9B76');
@@ -76,7 +76,7 @@ document.getElementById('nightModeBtn').addEventListener('click', function() {
         document.documentElement.style.setProperty('--delete-button-hover-color', 'darkred');
         this.textContent = 'Night Mode';
     } else {
-        // Switch to night mode
+        //Light Mode
         document.documentElement.style.setProperty('--bg-color', '#000');
         document.documentElement.style.setProperty('--text-color', '#fff');
         document.documentElement.style.setProperty('--button-color', '#444');
